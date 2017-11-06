@@ -14,28 +14,20 @@ namespace UserManagementSystem.Application
     {
         public bool Register(User user)
         {
+
             //User Validation
-            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            Match match = regex.Match(user.Email);
-            if ( string.IsNullOrEmpty(user.Password) || user.Password.Length < 8 || !match.Success)
-            {
+
+            UserValidation uservalidation = new UserValidation();
+            if (!uservalidation.Validation(user))
                 return false;
-            }
 
             //Save User
             UserRepository userRepository = new UserRepository();
             userRepository.SaveUser(user);
 
             //Send registration email
-            MailMessage mail = new MailMessage("thiscourse@isawesome.com", user.Email);
-            SmtpClient client = new SmtpClient();
-            client.Port = 25;
-            client.DeliveryMethod = SmtpDeliveryMethod.Network;
-            client.UseDefaultCredentials = false;
-            client.Host = "smtp.google.com";
-            mail.Subject = "You have successfully registered!";
-            mail.Body = "Hope you are enjoying this course so far";
-            client.Send(mail);
+            EmailUtilities emailUitilities = new EmailUtilities();
+            emailUitilities.SendRegistrationEmail(user);
 
             return true;
         }
