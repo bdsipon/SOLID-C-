@@ -25,7 +25,7 @@ namespace UserManagementSystem.Application
             UserRepository userRepository = new UserRepository();
             userRepository.SaveUser(user);
 
-            //Send registration email
+            //Send registration 
             EmailUtilities emailUitilities = new EmailUtilities();
             emailUitilities.SendRegistrationEmail(user);
 
