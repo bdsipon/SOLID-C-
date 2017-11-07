@@ -4,17 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BasicToAdvance
+namespace Calculator
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //Operation op = new Operation();
-            //op.Oopeation();
-
-            Exception1 E = new Exception1();
-            E.Exce();
         }
     }
 }

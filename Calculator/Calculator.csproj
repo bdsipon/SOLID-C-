@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9BD57CA6-BAF0-44B7-BEC6-F3D0CC497134}</ProjectGuid>
+    <ProjectGuid>{675B034A-9D15-43A7-B2FD-7FEF9B181F5F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BasicToAdvance</RootNamespace>
-    <AssemblyName>BasicToAdvance</AssemblyName>
+    <RootNamespace>Calculator</RootNamespace>
+    <AssemblyName>Calculator</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,12 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exception1.cs" />
-    <Compile Include="Operation.cs" />
-    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Variable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
